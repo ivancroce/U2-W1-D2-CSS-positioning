@@ -29,6 +29,97 @@ header {
   padding: 2em 1.5em;
 }
 
+h1 span {
+  position: relative;
+  z-index: 1;
+}
+
+.underline {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.imgLeft {
+  float: left;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+section {
+  position: relative;
+}
+
+section h2 {
+  position: absolute;
+  top: -15px;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.blue-buttons,
+.violet-button {
+  position: fixed;
+  right: -14px;
+  z-index: 999;
+}
+
+.blue-buttons {
+  bottom: 80px;
+}
+
+.violet-button {
+  bottom: 0px;
+}
+
+.blue-buttons a,
+.violet-button a {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255 255 255 / 68%);
+  border: 2px solid white;
+  padding: 10px;
+  margin-bottom: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 35px;
+}
+
+.social-button i {
+  color: #3f6bca;
+}
+
+.calendar-button i {
+  color: #3f6bca;
+}
+
+.top-button i {
+  color: #a02571;
+}
+
+aside div {
+  position: relative;
+}
+
+i.fas.fa-tag {
+  position: absolute;
+  right: 9px;
+  color: #cecece;
+  font-size: 65px;
+  top: 9px;
+}
+
 @media screen and (min-width: 800px) {
   header {
     padding: 1em;
@@ -148,96 +239,17 @@ h1 + p {
     font-size: 1.8rem;
     font-weight: 700;
   }
-  .imgLeft {
-    float: left;
-  }
 }
 
-@media screen and (min-width: 500px) {
-  h1 {
-    font-size: 3rem;
-    position: relative;
-    z-index: 1;
-  }
+p,
+ul,
+ol {
+  font-size: 1.2rem;
+}
 
-  p,
-  ul,
-  ol {
-    font-size: 1.2rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-  }
-
-  .imgLeft {
-    float: left;
-  }
-
-  .underline {
-    position: absolute;
-    opacity: 0.6;
-    top: 415px;
-    width: 80%;
-  }
-
-  article p:first-of-type {
-    color: #a0a0a0;
-  }
-
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-  }
-
-  section {
-    position: relative;
-  }
-
-  section h2 {
-    position: absolute;
-    top: -15px;
-    text-transform: uppercase;
-    box-shadow: 2px 2px 2px #888888;
-  }
-  /* to continue last 3 buttons and then medium-desktop version */
-  .fixed-buttons {
-    position: fixed;
-    bottom: 0;
-    right: -10px;
-    z-index: 999;
-  }
-
-  .fixed-buttons a {
-    display: flex;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: rgb(255 255 255 / 68%);
-    border: 2px solid white;
-    padding: 10px;
-    margin-bottom: 18px;
-    text-align: center;
-    transition: all 0.3s ease;
-    font-size: 35px;
-  }
-
-  .social-button i {
-    color: #3f6bca;
-  }
-
-  .calendar-button i {
-    color: #3f6bca;
-  }
-
-  .top-button i {
-    color: #a02571;
-  }
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 700px) {
@@ -245,19 +257,10 @@ h1 + p {
     font-size: 3.6rem;
   }
 
-  .underline {
-    top: 432px;
-    width: 67%;
-  }
-
-  .fixed-buttons {
+  .blue-buttons {
     bottom: unset;
-    top: 0;
-  }
-
-  .top-button {
-    display: sticky;
-    bottom: 0;
+    top: 15px;
+    right: -14px;
   }
 }
 
@@ -307,11 +310,16 @@ iframe {
     width: 50%;
     margin-inline: -2px;
     vertical-align: middle;
+    margin-block-start: 4rem;
   }
 
   iframe {
     height: 267px;
   }
+}
+
+section {
+  padding: 3.8em 1em;
 }
 
 /* TABELLE */
